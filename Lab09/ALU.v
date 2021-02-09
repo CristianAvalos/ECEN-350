@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos
+// NAME: Cristian Avalos UIN: 627003137
 `timescale 1ns / 1ps
 `define AND   4'b0000
 `define OR    4'b0001
@@ -36,5 +36,5 @@ module ALU(BusW, Zero, BusA, BusB, ALUCtrl);
          end       
       endcase
    end
-   assign #1 Zero = (BusW ? 1'b0 : 1'b1);
+   assign #1 Zero = BusW ? 1'b0 : 1'b1;
 endmodule

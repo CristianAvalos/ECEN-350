@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos
+// NAME: Cristian Avalos UIN: 627003137
 `timescale 1ns / 1ps
 
 module RegisterFile(BusA, BusB, BusW, RA, RB, RW, RegWr, Clk);

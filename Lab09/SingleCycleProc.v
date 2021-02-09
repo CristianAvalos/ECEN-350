@@ -1,3 +1,4 @@
+// NAME: Cristian Avalos UIN: 627003137
 `timescale 1ns / 1ps
 
 module SingleCycleProc(
@@ -7,7 +8,6 @@ module SingleCycleProc(
     output [63:0] dmemout,
     input CLK
 );
-
     // Next PC connections
     wire [63:0] nextpc;       // The next PC, to be updated on clock cycle
 
@@ -30,7 +30,7 @@ module SingleCycleProc(
     wire branch;
     wire uncond_branch;
     wire [3:0] aluctrl;
-    wire [1:0] signop;
+    wire [2:0] signop;
 
     // Register file connections
     wire [63:0] regoutA;     // Output A
@@ -128,5 +128,4 @@ module SingleCycleProc(
         .Clock(CLK)
     );
     assign #2 regoutW  = mem2reg ? dmemout : aluout;
-
 endmodule

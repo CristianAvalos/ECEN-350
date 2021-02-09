@@ -1,17 +1,14 @@
 `timescale 1ns / 1ps
-
 `define STRLEN 32
 `define HalfClockPeriod 60
 `define ClockPeriod `HalfClockPeriod * 2
 
 module SingleCycleProcTest;
-
     initial
     begin
         $dumpfile("singlecycle.vcd");
         $dumpvars;
     end
-
     // These tasks are used to check if a given test has passed and
     // confirm that all tests passed.
     task passTest;
@@ -50,7 +47,6 @@ module SingleCycleProcTest;
         .currentpc(currentPC),
         .dmemout(dMemOut)
     );
-
     initial begin
         // Initialize Inputs
         Reset_L = 1;
@@ -88,9 +84,16 @@ module SingleCycleProcTest;
         // ***********************************************************
         // Add your new tests here
         // ***********************************************************
+        while (currentPC < 64'h58)
+        begin
+           #(1 * `ClockPeriod);
+           $display("CurrentPC:%h",currentPC);
+        end
+        #(1 * `ClockPeriod);	// One more cycle to load the pass code from the DataMemory.
+        passTest(dMemOut, 64'h123456789ABCDEF0, "Results of Program 2", passed);
 
         // Done
-        allPassed(passed, 1);   // Be sure to change the one to match
+        allPassed(passed, 2);   // Be sure to change the one to match
                                 // the number of tests you add.
         $finish;
     end
@@ -113,6 +116,4 @@ module SingleCycleProcTest;
             $display("Watchdog Timer Expired.");
             $finish;
         end
-
-
 endmodule
