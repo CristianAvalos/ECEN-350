@@ -1,4 +1,4 @@
-// Name: Cristian Avalos | UIN: 627003137
+// Name: Cristian Avalos
 `timescale 1ns / 1ps
 `default_nettype none
 
