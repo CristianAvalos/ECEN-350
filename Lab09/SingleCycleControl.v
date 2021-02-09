@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos UIN: 627003137
+// NAME: Cristian Avalos
 `define OPCODE_ANDREG 11'b?0001010???
 `define OPCODE_ORRREG 11'b?0101010???
 `define OPCODE_ADDREG 11'b?0?01011???
