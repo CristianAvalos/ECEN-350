@@ -1,4 +1,4 @@
-// Name: Cristian Avalos | UIN: 627003137
+// Name: Cristian Avalos
 module HalfAdd(sum, carry, a, b);
    input wire a, b;        // input wires
    output wire sum, carry; // outputs
