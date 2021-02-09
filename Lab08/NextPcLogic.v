@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos UIN: 627003137
+// NAME: Cristian Avalos
 module NextPcLogic(NextPC, CurrentPC, SignExtImm64, Branch, ALUZero, Uncondbranch);
    input [63:0] CurrentPC, SignExtImm64;
    input Branch, ALUZero, Uncondbranch;
