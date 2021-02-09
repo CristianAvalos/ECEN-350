@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos UIN: 627003137
+// NAME: Cristian Avalos
 `define STRLEN 39
 module NextPcLogicTest;
    task passTest; // same as previouse labs
