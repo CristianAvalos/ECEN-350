@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos UIN: 627003137
+// NAME: Cristian Avalos
 module RegisterFile(BusA, BusB, BusW, RA, RB, RW, RegWr, Clk);
     output [63:0] BusA;
     output [63:0] BusB;
