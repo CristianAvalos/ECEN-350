@@ -1,4 +1,4 @@
-// NAME: Cristian Avalos UIN: 627003137
+// NAME: Cristian Avalos
 `define STRLEN 32
 module RegisterFileTest2;
    task passTest;
