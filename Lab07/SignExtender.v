@@ -1,5 +1,4 @@
 // NAME: Cristian Avalos
-?? UIN: 627003137
 module SignExtender(in, out, ctrl);
    input [25:0] in;
    input [1:0] 	ctrl;
